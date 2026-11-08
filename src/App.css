@@ -675,8 +675,12 @@ a:focus-visible {
   }
 
   .visual {
-    width: min(67vw, 320px);
+    width: min(74vw, 320px);
     margin: -5px auto 0;
+  }
+
+  .code-window {
+    width: 90%;
   }
 
   .content-section {

@@ -78,7 +78,7 @@ function App() {
                 <i />
                 <i />
               </span>
-              <span>hello.tsx</span>
+              <span>samuel.ts</span>
               <span className="window-menu">•••</span>
             </div>
             <div className="code-lines">
@@ -86,24 +86,37 @@ function App() {
                 <span className="line-number">01</span>
                 <span>
                   <span className="code-purple">const</span>{' '}
-                  <span className="code-blue">create</span> = () =&gt; {'{'}
+                  <span className="code-blue">sam</span> = {'{'}
                 </span>
               </div>
-              <div className="code-line active-code-line">
+              <div className="code-line">
                 <span className="line-number">02</span>
                 <span>
-                  <span className="code-purple">return</span>{' '}
-                  <span className="code-green">"something great"</span>
-                  <span className="code-cursor" />
+                  builds: <span className="code-green">"React + TS"</span>,
                 </span>
               </div>
               <div className="code-line">
                 <span className="line-number">03</span>
-                <span>{'}'}</span>
+                <span>
+                  tests: <span className="code-green">"Cypress + Playwright"</span>,
+                </span>
+              </div>
+              <div className="code-line">
+                <span className="line-number">04</span>
+                <span>
+                  bugs: <span className="code-green">"all intentional"</span>,
+                </span>
+              </div>
+              <div className="code-line active-code-line">
+                <span className="line-number">05</span>
+                <span>
+                  status: <span className="code-green">"still in progress"</span>
+                  <span className="code-cursor" />
+                </span>
               </div>
               <div className="code-line code-comment">
-                <span className="line-number">04</span>
-                <span>// still in progress...</span>
+                <span className="line-number">06</span>
+                <span>{'}'} // ship after one more test</span>
               </div>
             </div>
           </div>
