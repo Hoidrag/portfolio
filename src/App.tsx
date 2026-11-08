@@ -226,6 +226,77 @@ function App() {
             <span aria-hidden="true">↗</span>
           </a>
         </div>
+        <div className="deploy-visual">
+          <div className="deploy-orbit deploy-orbit-outer" aria-hidden="true" />
+          <div className="deploy-orbit deploy-orbit-inner" aria-hidden="true" />
+          <div className="code-window deploy-code-window">
+            <div className="code-window-bar">
+              <span className="window-dots" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
+              <span>deploy.ts</span>
+              <span className="window-menu" aria-hidden="true">
+                •••
+              </span>
+            </div>
+            <div className="deploy-code-lines">
+              <div className="deploy-code-line deploy-code-line-1">
+                <span className="line-number">01</span>
+                <span>
+                  <span className="code-purple">type</span> Status ={' '}
+                  <span className="code-green">"working"</span> |{' '}
+                  <span className="code-green">"don't touch"</span>;
+                </span>
+              </div>
+              <div className="deploy-code-line deploy-code-line-2">
+                <span className="line-number">02</span>
+                <span>
+                  <span className="code-purple">function</span>{' '}
+                  <span className="code-blue">deploy</span>(bugs:{' '}
+                  <span className="code-purple">number</span>): Status {'{'}
+                </span>
+              </div>
+              <div className="deploy-code-line deploy-code-line-3">
+                <span className="line-number">03</span>
+                <span>
+                  &nbsp;&nbsp;<span className="code-purple">if</span> (bugs &gt;
+                  0) {'{'}
+                </span>
+              </div>
+              <div className="deploy-code-line deploy-code-line-4">
+                <span className="line-number">04</span>
+                <span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="code-purple">return</span>{' '}
+                  <span className="code-green">"working"</span>;
+                </span>
+              </div>
+              <div className="deploy-code-line deploy-code-line-5">
+                <span className="line-number">05</span>
+                <span>&nbsp;&nbsp;{'}'}</span>
+              </div>
+              <div className="deploy-code-line deploy-code-line-6">
+                <span className="line-number">06</span>
+                <span>
+                  &nbsp;&nbsp;<span className="code-purple">return</span>{' '}
+                  <span className="code-green">"don't touch"</span>;
+                </span>
+              </div>
+              <div className="deploy-code-line deploy-code-line-7">
+                <span className="line-number">07</span>
+                <span>{'}'}</span>
+              </div>
+              <div className="deploy-code-line deploy-code-line-8 deploy-code-comment">
+                <span className="line-number">08</span>
+                <span>
+                  // if it works, it's not a bug anymore
+                  <span className="deploy-code-cursor" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
         <footer className="footer">
           <span>© 2026 — Samuel Hoidrag</span>
           <a className="footer-location" href="#home">
