@@ -42,8 +42,6 @@ jobs:
           push: true
           tags: |
             ${{ env.DOCKER_REPO }}:samuelhoidrag-com-${{ steps.tags.outputs.sha }}
-          build-args: |
-            NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 

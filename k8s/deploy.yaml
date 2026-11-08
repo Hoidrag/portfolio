@@ -14,13 +14,10 @@ spec:
       imagePullSecrets:
         - name: bixag-dockerhub-secret-bx-shared
       containers:
-        - name: backend
+        - name: frontend
           image: ${IMAGE}
           ports:
-            - containerPort: 3000
-          env:
-            - name: NEXTAUTH_URL
-              value: https://samuelhoidrag.com
+            - containerPort: 80
           resources:
             limits:
               memory: '256Mi'
@@ -28,6 +25,3 @@ spec:
             requests:
               memory: '128Mi'
               cpu: '100m'
-          envFrom:
-            - secretRef:
-                name: bx-samuelhoidrag-com
