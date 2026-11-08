@@ -3,7 +3,7 @@ FROM node:24-alpine AS base
 # ---- deps ----
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
-WORKDIR /app
+WORKDIR /src
 
 COPY package.json package-lock.json* ./
 RUN npm ci
@@ -11,7 +11,7 @@ RUN npm ci
 
 # ---- builder ----
 FROM base AS builder
-WORKDIR /app
+WORKDIR /src
 
 COPY --from=deps /app/node_modules ./node_modules
 
