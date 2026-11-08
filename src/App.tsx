@@ -71,7 +71,43 @@ function App() {
         <div className="visual" aria-hidden="true">
           <div className="visual-orbit orbit-outer" />
           <div className="visual-orbit orbit-inner" />
-          <div className="visual-sun" />
+          <div className="code-window">
+            <div className="code-window-bar">
+              <span className="window-dots">
+                <i />
+                <i />
+                <i />
+              </span>
+              <span>hello.tsx</span>
+              <span className="window-menu">•••</span>
+            </div>
+            <div className="code-lines">
+              <div className="code-line">
+                <span className="line-number">01</span>
+                <span>
+                  <span className="code-purple">const</span>{' '}
+                  <span className="code-blue">create</span> = () =&gt; {'{'}
+                </span>
+              </div>
+              <div className="code-line active-code-line">
+                <span className="line-number">02</span>
+                <span>
+                  <span className="code-purple">return</span>{' '}
+                  <span className="code-green">"something great"</span>
+                  <span className="code-cursor" />
+                </span>
+              </div>
+              <div className="code-line">
+                <span className="line-number">03</span>
+                <span>{'}'}</span>
+              </div>
+              <div className="code-line code-comment">
+                <span className="line-number">04</span>
+                <span>// still in progress...</span>
+              </div>
+            </div>
+          </div>
+          <span className="code-stamp">&lt; / &gt;</span>
           <span className="visual-caption">IN THE MAKING</span>
           <span className="visual-number">01</span>
         </div>
