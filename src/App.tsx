@@ -41,8 +41,8 @@ function App() {
       <section className="hero" id="home" aria-labelledby="page-title">
         <div className="hero-copy">
           <p className="eyebrow">
-            <span className="status-dot" aria-hidden="true" />
-            A LITTLE WORK IN PROGRESS
+            <span className="status-dot" aria-hidden="true" />A LITTLE WORK IN
+            PROGRESS
           </p>
           <h1 id="page-title">
             Good things
@@ -98,7 +98,8 @@ function App() {
               <div className="code-line">
                 <span className="line-number">03</span>
                 <span>
-                  tests: <span className="code-green">"Cypress + Playwright"</span>,
+                  tests:{' '}
+                  <span className="code-green">"Cypress + Playwright"</span>,
                 </span>
               </div>
               <div className="code-line">
@@ -110,7 +111,8 @@ function App() {
               <div className="code-line active-code-line">
                 <span className="line-number">05</span>
                 <span>
-                  status: <span className="code-green">"still in progress"</span>
+                  status:{' '}
+                  <span className="code-green">"still in progress"</span>
                   <span className="code-cursor" />
                 </span>
               </div>
@@ -152,7 +154,6 @@ function App() {
             <div className="skills" aria-label="Technologies and tools">
               <span>React</span>
               <span>TypeScript</span>
-              <span>Frontend</span>
               <span>Manual QA</span>
               <span>Cypress</span>
               <span>Playwright</span>
@@ -179,8 +180,7 @@ function App() {
               className="project-card"
               href={`mailto:hoidragsamuel@yahoo.com?subject=${encodeURIComponent(`Tell me about ${project.title}`)}`}
               key={project.number}
-              aria-label={`Discuss the ${project.title} project idea by email`}
-            >
+              aria-label={`Discuss the ${project.title} project idea by email`}>
               <span className="project-number">{project.number}</span>
               <span className="project-details">
                 <span className="project-title">{project.title}</span>
@@ -205,96 +205,27 @@ function App() {
       </section>
 
       <section className="content-section contact-section" id="contact">
-        <div className="section-heading">
-          <p className="section-kicker">SAY HELLO</p>
-          <span className="section-index">03 / 03</span>
-        </div>
-        <div className="contact-content">
-          <div>
-            <h2>
-              Have a project
-              <br />
-              in <span className="highlight">mind?</span>
-            </h2>
-            <p>
-              I’m always happy to talk about frontend development, QA, or
-              something new you’re building.
-            </p>
+        <div className="contact-main">
+          <div className="section-heading">
+            <p className="section-kicker">SAY HELLO</p>
+            <span className="section-index">03 / 03</span>
           </div>
-          <a className="contact-link" href="mailto:hoidragsamuel@yahoo.com">
-            <span>hoidragsamuel@yahoo.com</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-        <div className="deploy-visual">
-          <div className="deploy-orbit deploy-orbit-outer" aria-hidden="true" />
-          <div className="deploy-orbit deploy-orbit-inner" aria-hidden="true" />
-          <div className="code-window deploy-code-window">
-            <div className="code-window-bar">
-              <span className="window-dots" aria-hidden="true">
-                <i />
-                <i />
-                <i />
-              </span>
-              <span>deploy.ts</span>
-              <span className="window-menu" aria-hidden="true">
-                •••
-              </span>
+          <div className="contact-content">
+            <div>
+              <h2>
+                Have a project
+                <br />
+                in <span className="highlight">mind?</span>
+              </h2>
+              <p>
+                I’m always happy to talk about frontend development, QA, or
+                something new you’re building.
+              </p>
             </div>
-            <div className="deploy-code-lines">
-              <div className="deploy-code-line deploy-code-line-1">
-                <span className="line-number">01</span>
-                <span>
-                  <span className="code-purple">type</span> Status ={' '}
-                  <span className="code-green">"working"</span> |{' '}
-                  <span className="code-green">"don't touch"</span>;
-                </span>
-              </div>
-              <div className="deploy-code-line deploy-code-line-2">
-                <span className="line-number">02</span>
-                <span>
-                  <span className="code-purple">function</span>{' '}
-                  <span className="code-blue">deploy</span>(bugs:{' '}
-                  <span className="code-purple">number</span>): Status {'{'}
-                </span>
-              </div>
-              <div className="deploy-code-line deploy-code-line-3">
-                <span className="line-number">03</span>
-                <span>
-                  &nbsp;&nbsp;<span className="code-purple">if</span> (bugs &gt;
-                  0) {'{'}
-                </span>
-              </div>
-              <div className="deploy-code-line deploy-code-line-4">
-                <span className="line-number">04</span>
-                <span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="code-purple">return</span>{' '}
-                  <span className="code-green">"working"</span>;
-                </span>
-              </div>
-              <div className="deploy-code-line deploy-code-line-5">
-                <span className="line-number">05</span>
-                <span>&nbsp;&nbsp;{'}'}</span>
-              </div>
-              <div className="deploy-code-line deploy-code-line-6">
-                <span className="line-number">06</span>
-                <span>
-                  &nbsp;&nbsp;<span className="code-purple">return</span>{' '}
-                  <span className="code-green">"don't touch"</span>;
-                </span>
-              </div>
-              <div className="deploy-code-line deploy-code-line-7">
-                <span className="line-number">07</span>
-                <span>{'}'}</span>
-              </div>
-              <div className="deploy-code-line deploy-code-line-8 deploy-code-comment">
-                <span className="line-number">08</span>
-                <span>
-                  // if it works, it's not a bug anymore
-                  <span className="deploy-code-cursor" />
-                </span>
-              </div>
-            </div>
+            <a className="contact-link" href="mailto:hoidragsamuel@yahoo.com">
+              <span>hoidragsamuel@yahoo.com</span>
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
         <footer className="footer">
