@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bx-samuelhoidrag-com
+  namespace: bx-shared
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: bx-samuelhoidrag-com }
+  template:
+    metadata:
+      labels: { app: bx-samuelhoidrag-com }
+    spec:
+      imagePullSecrets:
+        - name: bixag-dockerhub-secret-bx-shared
+      containers:
+        - name: backend
+          image: ${IMAGE}
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NEXTAUTH_URL
+              value: https://samuelhoidrag.com
+          resources:
+            limits:
+              memory: '256Mi'
+              cpu: '500m'
+            requests:
+              memory: '128Mi'
+              cpu: '100m'
+          envFrom:
+            - secretRef:
+                name: bx-samuelhoidrag-com
