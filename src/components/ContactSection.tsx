@@ -1,16 +1,18 @@
 import { useState } from 'react'
+import { useLanguage } from '../LanguageContext'
 import { SiteFooter } from './SiteFooter'
 
 export function ContactSection() {
-  const [copyStatus, setCopyStatus] = useState('')
+  const [copyStatus, setCopyStatus] = useState<'copied' | 'failed' | null>(null)
   const email = 'hoidragsamuel@yahoo.com'
+  const { t } = useLanguage()
 
   async function copyEmail() {
     try {
       await navigator.clipboard.writeText(email)
-      setCopyStatus('Email copied to clipboard.')
+      setCopyStatus('copied')
     } catch {
-      setCopyStatus('Could not copy. Please select and copy the email address.')
+      setCopyStatus('failed')
     }
   }
 
@@ -18,20 +20,18 @@ export function ContactSection() {
     <section className="content-section contact-section" id="contact">
       <div className="contact-main">
         <div className="section-heading">
-          <p className="section-kicker">SAY HELLO</p>
+          <p className="section-kicker">{t.contactKicker}</p>
           <span className="section-index">03 / 03</span>
         </div>
         <div className="contact-content">
           <div>
             <h2>
-              Have a project
+              {t.contactTitle}
               <br />
-              in <span className="highlight">mind?</span>
+              {t.contactTitlePrefix}{' '}
+              <span className="highlight">{t.contactTitleHighlight}</span>
             </h2>
-            <p>
-              I’m always happy to talk about frontend development, QA, or
-              something new you’re building.
-            </p>
+            <p>{t.contactDescription}</p>
           </div>
           <div className="contact-actions">
             <a className="contact-link" href={`mailto:${email}`}>
@@ -39,10 +39,14 @@ export function ContactSection() {
               <span aria-hidden="true">↗</span>
             </a>
             <button className="contact-copy" type="button" onClick={copyEmail}>
-              COPY EMAIL
+              {t.copyEmail}
             </button>
             <span className="copy-status" aria-live="polite">
-              {copyStatus}
+              {copyStatus === 'copied'
+                ? t.emailCopied
+                : copyStatus === 'failed'
+                  ? t.emailCopyFailed
+                  : ''}
             </span>
           </div>
         </div>

@@ -1,13 +1,25 @@
+import { useLanguage } from '../LanguageContext'
+
 export function SiteHeader() {
+  const { language, setLanguage, t } = useLanguage()
+
   return (
     <header className="topbar">
-      <a className="wordmark" href="#home" aria-label="Samuel home">
+      <a className="wordmark" href="#home" aria-label={t.homeLabel}>
         Samuel<span>.</span>
       </a>
-      <nav className="main-nav" aria-label="Main navigation">
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
+      <nav className="main-nav" aria-label={t.navLabel}>
+        <a href="#about">{t.aboutNav}</a>
+        <a href="#projects">{t.projectsNav}</a>
+        <a href="#contact">{t.contactNav}</a>
+        <button
+          className="language-toggle"
+          type="button"
+          aria-label={t.switchLanguage}
+          onClick={() => setLanguage(language === 'en' ? 'ro' : 'en')}
+        >
+          {language === 'en' ? 'RO' : 'EN'}
+        </button>
       </nav>
     </header>
   )

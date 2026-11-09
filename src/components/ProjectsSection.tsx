@@ -1,47 +1,57 @@
+import { useLanguage } from '../LanguageContext'
 import { projectIdeas } from '../data/projects'
 
 export function ProjectsSection() {
+  const { t } = useLanguage()
+
   return (
     <section className="content-section projects-section" id="projects">
       <div className="section-heading">
-        <p className="section-kicker">SELECTED PROJECT IDEAS</p>
+        <p className="section-kicker">{t.projectsKicker}</p>
         <span className="section-index">02 / 03</span>
       </div>
       <div className="projects-intro">
-        <h2>Things taking shape.</h2>
-        <p>
-          This portfolio is still growing. Here are a few ideas I’m exploring
-          — more work coming soon.
-        </p>
+        <h2>{t.projectsTitle}</h2>
+        <p>{t.projectsDescription}</p>
       </div>
       <div className="project-list">
-        {projectIdeas.map((project) => (
-          <a
-            className="project-card"
-            href={`mailto:hoidragsamuel@yahoo.com?subject=${encodeURIComponent(`Tell me about ${project.title}`)}`}
-            key={project.number}
-            aria-label={`Discuss the ${project.title} project idea by email`}
-          >
-            <span className="project-number">{project.number}</span>
-            <span className="project-details">
-              <span className="project-title">{project.title}</span>
-              <span className="project-description">
-                {project.description}
+        {t.projects.map((translatedProject, index) => {
+          const project = projectIdeas[index]
+
+          if (!project) {
+            throw new Error(`Missing project metadata for project ${index + 1}`)
+          }
+
+          return (
+            <a
+              className="project-card"
+              href={`mailto:hoidragsamuel@yahoo.com?subject=${encodeURIComponent(`${t.projectEmailSubject} ${translatedProject.title}`)}`}
+              key={project.number}
+              aria-label={t.discussProject.replace(
+                '{title}',
+                translatedProject.title,
+              )}
+            >
+              <span className="project-number">{project.number}</span>
+              <span className="project-details">
+                <span className="project-title">{translatedProject.title}</span>
+                <span className="project-description">
+                  {translatedProject.description}
+                </span>
+                <span className="project-tools">{project.tools}</span>
               </span>
-              <span className="project-tools">{project.tools}</span>
-            </span>
-            <span className="project-action">
-              <span className="project-status">IN PROGRESS</span>
-              <span className="project-arrow" aria-hidden="true">
-                ↗
+              <span className="project-action">
+                <span className="project-status">{t.projectStatus}</span>
+                <span className="project-arrow" aria-hidden="true">
+                  ↗
+                </span>
               </span>
-            </span>
-          </a>
-        ))}
+            </a>
+          )
+        })}
       </div>
       <p className="projects-note">
-        These are concepts in progress, not published projects. Have an idea in
-        mind? <a href="#contact">Let’s talk.</a>
+        {t.projectsNote} <a href="#contact">{t.projectsContact}</a>
       </p>
     </section>
   )
