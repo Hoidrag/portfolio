@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useLanguage } from '../LanguageContext'
+import { useLanguage } from '../i18n/LanguageProvider'
 import { SiteFooter } from './SiteFooter'
 
 export function ContactSection() {

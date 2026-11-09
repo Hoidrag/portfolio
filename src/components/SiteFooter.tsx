@@ -1,4 +1,4 @@
-import { useLanguage } from '../LanguageContext'
+import { useLanguage } from '../i18n/LanguageProvider'
 
 export function SiteFooter() {
   const { t } = useLanguage()

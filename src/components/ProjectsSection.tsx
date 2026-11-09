@@ -1,4 +1,4 @@
-import { useLanguage } from '../LanguageContext'
+import { useLanguage } from '../i18n/LanguageProvider'
 import { projectIdeas } from '../data/projects'
 
 export function ProjectsSection() {

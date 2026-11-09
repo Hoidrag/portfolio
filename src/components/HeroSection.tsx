@@ -1,4 +1,4 @@
-import { useLanguage } from '../LanguageContext'
+import { useLanguage } from '../i18n/LanguageProvider'
 
 function CodeVisual() {
   const { t } = useLanguage()
