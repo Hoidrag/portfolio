@@ -131,10 +131,10 @@ export const translations: Record<Language, Translation> = {
     projectsNote:
       'Acestea sunt concepte în lucru, nu proiecte publicate. Ai o idee?',
     projectsContact: 'Hai să vorbim.',
-    contactKicker: 'SPUNE SALUT',
+    contactKicker: 'SALUT',
     contactTitle: 'Ai un proiect',
     contactTitlePrefix: 'în',
-    contactTitleHighlight: 'în minte?',
+    contactTitleHighlight: 'minte?',
     contactDescription:
       'Mi-ar plăcea să vorbim despre frontend, QA sau despre ceva nou la care lucrezi.',
     copyEmail: 'COPIAZĂ E-MAILUL',
