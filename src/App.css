@@ -1102,6 +1102,31 @@ h1 {
   letter-spacing: 0.08em;
 }
 
+.contact-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid rgba(233, 231, 225, 0.18);
+  color: #c7c7bd;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.contact-profile-link:hover {
+  border-color: rgba(197, 243, 107, 0.55);
+  color: var(--accent);
+}
+
+.contact-profile-link span {
+  color: var(--accent);
+}
+
 .contact-copy:hover {
   color: var(--ink);
 }

@@ -43,6 +43,15 @@ export function ContactSection() {
             <button className="contact-copy" type="button" onClick={copyEmail}>
               {t.copyEmail}
             </button>
+            <a
+              className="contact-profile-link"
+              href="https://www.linkedin.com/in/samuel-h-404965175/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t.linkedinProfile}
+              <span aria-hidden="true">↗</span>
+            </a>
             <span className="copy-status" aria-live="polite">
               {copyStatus === 'copied'
                 ? t.emailCopied
