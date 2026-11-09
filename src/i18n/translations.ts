@@ -40,6 +40,9 @@ const english = {
   projectsTitle: 'Things taking shape.',
   projectsDescription:
     'This portfolio is still growing. Here are a few ideas I’m exploring — more work coming soon.',
+  projectConceptLabel: 'CONCEPT PREVIEW',
+  projectPreviewLabels: ['ANALYTICS OVERVIEW', 'STORE PREVIEW', 'TEST RUN'],
+  discussProjectLink: 'DISCUSS THIS CONCEPT',
   projectStatus: 'IN PROGRESS',
   discussProject: 'Discuss the {title} project idea by email',
   projectEmailSubject: 'Tell me about',
@@ -125,6 +128,9 @@ export const translations: Record<Language, Translation> = {
     projectsTitle: 'Proiecte în devenire.',
     projectsDescription:
       'Acest portofoliu este încă în lucru. Iată câteva idei pe care le explorez — în curând vor apărea și alte proiecte.',
+    projectConceptLabel: 'PREZENTARE CONCEPT',
+    projectPreviewLabels: ['ANALIZĂ DATE', 'PREZENTARE MAGAZIN', 'RULARE TESTE'],
+    discussProjectLink: 'HAI SĂ VORBIM DESPRE IDEE',
     projectStatus: 'ÎN LUCRU',
     discussProject: 'Discută prin e-mail ideea proiectului „{title}”',
     projectEmailSubject: 'Aș dori să discut despre',

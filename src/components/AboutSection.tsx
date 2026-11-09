@@ -4,7 +4,10 @@ export function AboutSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="content-section about-section" id="about">
+    <section
+      className="content-section about-section content-section-compact"
+      id="about"
+    >
       <div className="section-heading">
         <p className="section-kicker">{t.aboutKicker}</p>
         <span className="section-index">01 / 03</span>
