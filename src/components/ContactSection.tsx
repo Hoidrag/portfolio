@@ -45,6 +45,14 @@ export function ContactSection() {
             </button>
             <a
               className="contact-profile-link"
+              href="/Samuel-Hoidrag-CV-2026.pdf"
+              download
+            >
+              {t.downloadCv}
+              <span aria-hidden="true">↓</span>
+            </a>
+            <a
+              className="contact-profile-link"
               href="https://www.linkedin.com/in/samuel-h-404965175/"
               target="_blank"
               rel="noreferrer"

@@ -56,6 +56,7 @@ const english = {
     'I’m looking for my next opportunity in frontend development or QA. I combine React and TypeScript development with a quality-focused mindset and hands-on testing using Cypress and Playwright.',
   contactEmailSubject: 'Frontend / QA job opportunity',
   copyEmail: 'COPY EMAIL',
+  downloadCv: 'DOWNLOAD CV (PDF)',
   linkedinProfile: 'VIEW LINKEDIN PROFILE',
   emailCopied: 'Email copied to clipboard.',
   emailCopyFailed: 'Could not copy. Please select and copy the email address.',
@@ -145,6 +146,7 @@ export const translations: Record<Language, Translation> = {
       'Sunt în căutarea următoarei oportunități profesionale în frontend sau QA. Îmbin dezvoltarea cu React și TypeScript cu atenția pentru calitate și testarea cu Cypress și Playwright.',
     contactEmailSubject: 'Oportunitate de angajare — Frontend / QA',
     copyEmail: 'COPIAZĂ E-MAILUL',
+    downloadCv: 'DESCARCĂ CV-UL (PDF)',
     linkedinProfile: 'VEZI PROFILUL LINKEDIN',
     emailCopied: 'Adresa de e-mail a fost copiată.',
     emailCopyFailed:
