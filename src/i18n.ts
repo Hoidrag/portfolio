@@ -46,12 +46,12 @@ const english = {
   projectsNote:
     'These are concepts in progress, not published projects. Have an idea in mind?',
   projectsContact: 'Let’s talk.',
-  contactKicker: 'SAY HELLO',
-  contactTitle: 'Have a project',
-  contactTitlePrefix: 'in',
-  contactTitleHighlight: 'mind?',
+  contactKicker: 'OPEN TO OPPORTUNITIES',
+  contactTitle: 'Looking for a',
+  contactTitleHighlight: 'frontend developer or QA engineer?',
   contactDescription:
-    'I’m always happy to talk about frontend development, QA, or something new you’re building.',
+    'I’m looking for my next opportunity in frontend development or QA. I combine React and TypeScript development with a quality-focused mindset and hands-on testing using Cypress and Playwright.',
+  contactEmailSubject: 'Frontend / QA job opportunity',
   copyEmail: 'COPY EMAIL',
   emailCopied: 'Email copied to clipboard.',
   emailCopyFailed: 'Could not copy. Please select and copy the email address.',
@@ -131,12 +131,12 @@ export const translations: Record<Language, Translation> = {
     projectsNote:
       'Acestea sunt concepte în lucru, nu proiecte publicate. Ai o idee?',
     projectsContact: 'Hai să vorbim.',
-    contactKicker: 'SALUT',
-    contactTitle: 'Ai un proiect',
-    contactTitlePrefix: 'în',
-    contactTitleHighlight: 'minte?',
+    contactKicker: 'ÎN CĂUTAREA UNUI NOU ROL',
+    contactTitle: 'Căutați un',
+    contactTitleHighlight: 'dezvoltator frontend sau QA Engineer?',
     contactDescription:
-      'Mi-ar plăcea să vorbim despre frontend, QA sau despre ceva nou la care lucrezi.',
+      'Sunt în căutarea următoarei oportunități profesionale în frontend sau QA. Îmbin dezvoltarea cu React și TypeScript cu atenția pentru calitate și testarea cu Cypress și Playwright.',
+    contactEmailSubject: 'Oportunitate de angajare — Frontend / QA',
     copyEmail: 'COPIAZĂ E-MAILUL',
     emailCopied: 'Adresa de e-mail a fost copiată.',
     emailCopyFailed:

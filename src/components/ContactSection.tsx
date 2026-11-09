@@ -28,13 +28,15 @@ export function ContactSection() {
             <h2>
               {t.contactTitle}
               <br />
-              {t.contactTitlePrefix}{' '}
               <span className="highlight">{t.contactTitleHighlight}</span>
             </h2>
             <p>{t.contactDescription}</p>
           </div>
           <div className="contact-actions">
-            <a className="contact-link" href={`mailto:${email}`}>
+            <a
+              className="contact-link"
+              href={`mailto:${email}?subject=${encodeURIComponent(t.contactEmailSubject)}`}
+            >
               <span>{email}</span>
               <span aria-hidden="true">↗</span>
             </a>
