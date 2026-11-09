@@ -598,6 +598,33 @@ h1 {
   white-space: nowrap;
 }
 
+.contact-actions {
+  display: grid;
+  justify-items: start;
+  gap: 14px;
+}
+
+.contact-copy {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.contact-copy:hover {
+  color: var(--ink);
+}
+
+.copy-status {
+  min-height: 1em;
+  color: #a4a49d;
+  font-size: 12px;
+}
+
 .contact-link span:last-child {
   color: var(--accent);
 }
@@ -621,6 +648,11 @@ h1 {
 }
 
 a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 5px;
 }
