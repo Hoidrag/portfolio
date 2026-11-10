@@ -63,9 +63,9 @@ const english = {
   backToTop: 'BACK TO TOP',
   projects: [
     {
-      title: 'Analytics dashboard',
+      title: 'Medcare',
       description:
-        'A clear, responsive dashboard for exploring data and keeping track of what matters.',
+        'A biomedical informatics project bringing technology and medical data together in a thoughtful, modern web experience.',
     },
     {
       title: 'E-commerce experience',
@@ -154,9 +154,9 @@ export const translations: Record<Language, Translation> = {
     backToTop: 'ÎNAPOI SUS',
     projects: [
       {
-        title: 'Panou de analiză a datelor',
+        title: 'Medcare',
         description:
-          'Un panou clar și adaptabil, pentru explorarea datelor și urmărirea informațiilor importante.',
+          'Un proiect de informatică în biomedicină, care aduce împreună tehnologia și datele medicale într-o experiență web modernă și atent construită.',
       },
       {
         title: 'Experiență de cumpărături online',

@@ -1,133 +1,98 @@
 import { useLanguage } from '../i18n/LanguageProvider'
 import { projectIdeas } from '../data/projects'
+import medcarePreview from '../assets/medcare-preview.svg'
 
 type ProjectPreviewProps = {
-  kind: 'analytics' | 'store' | 'tests'
+  kind: 'medcare' | 'store' | 'tests'
   label: string
   conceptLabel: string
 }
 
-const previewKinds = ['analytics', 'store', 'tests'] as const
+const previewKinds = ['medcare', 'store', 'tests'] as const
 
 function ProjectPreview({ kind, label, conceptLabel }: ProjectPreviewProps) {
   return (
     <div className={`project-preview project-preview-${kind}`} aria-hidden="true">
-      <div className="preview-window">
-        <div className="preview-toolbar">
-          <span className="preview-dots">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span>{label}</span>
-          <span className="preview-live">
-            <i /> {kind === 'tests' ? 'SPEC' : 'UI'}
-          </span>
+      {kind === 'medcare' ? (
+        <img className="medcare-preview-image" src={medcarePreview} alt="" />
+      ) : (
+        <div className="preview-window">
+          <div className="preview-toolbar">
+            <span className="preview-dots">
+              <i />
+              <i />
+              <i />
+            </span>
+            <span>{label}</span>
+            <span className="preview-live">
+              <i /> {kind === 'tests' ? 'SPEC' : 'UI'}
+            </span>
+          </div>
+          {kind === 'store' && (
+            <div className="store-preview-body">
+              <div className="store-preview-nav">
+                <i />
+                <i />
+                <i />
+              </div>
+              <div className="store-preview-hero">
+                <span className="store-preview-copy">
+                  <i />
+                  <i />
+                  <b />
+                </span>
+                <span className="store-preview-product">
+                  <i />
+                </span>
+              </div>
+              <div className="store-preview-items">
+                <i />
+                <i />
+                <i />
+              </div>
+            </div>
+          )}
+          {kind === 'tests' && (
+            <div className="test-preview-body">
+              <div className="test-preview-summary">
+                <span>
+                  <i />
+                  <b />
+                </span>
+                <span>
+                  <i />
+                  <b />
+                </span>
+              </div>
+              <div className="test-preview-list">
+                <span>
+                  <i />
+                  <b />
+                  <em />
+                </span>
+                <span>
+                  <i />
+                  <b />
+                  <em />
+                </span>
+                <span>
+                  <i />
+                  <b />
+                  <em />
+                </span>
+                <span>
+                  <i />
+                  <b />
+                  <em />
+                </span>
+              </div>
+            </div>
+          )}
         </div>
-        {kind === 'analytics' && (
-          <div className="preview-body">
-            <div className="preview-sidebar">
-              <span className="preview-logo" />
-              <i className="selected" />
-              <i />
-              <i />
-              <i />
-            </div>
-            <div className="preview-content">
-              <div className="preview-heading">
-                <span />
-                <i />
-              </div>
-              <div className="preview-stats">
-                <span>
-                  <i />
-                  <b />
-                </span>
-                <span>
-                  <i />
-                  <b />
-                </span>
-                <span>
-                  <i />
-                  <b />
-                </span>
-              </div>
-              <div className="preview-chart">
-                <div className="preview-chart-label">
-                  <i />
-                  <i />
-                </div>
-                <div className="preview-chart-bars">
-                  {Array.from({ length: 12 }, (_, index) => (
-                    <i key={index} />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-        {kind === 'store' && (
-          <div className="store-preview-body">
-            <div className="store-preview-nav">
-              <i />
-              <i />
-              <i />
-            </div>
-            <div className="store-preview-hero">
-              <span className="store-preview-copy">
-                <i />
-                <i />
-                <b />
-              </span>
-              <span className="store-preview-product">
-                <i />
-              </span>
-            </div>
-            <div className="store-preview-items">
-              <i />
-              <i />
-              <i />
-            </div>
-          </div>
-        )}
-        {kind === 'tests' && (
-          <div className="test-preview-body">
-            <div className="test-preview-summary">
-              <span>
-                <i />
-                <b />
-              </span>
-              <span>
-                <i />
-                <b />
-              </span>
-            </div>
-            <div className="test-preview-list">
-              <span>
-                <i />
-                <b />
-                <em />
-              </span>
-              <span>
-                <i />
-                <b />
-                <em />
-              </span>
-              <span>
-                <i />
-                <b />
-                <em />
-              </span>
-              <span>
-                <i />
-                <b />
-                <em />
-              </span>
-            </div>
-          </div>
-        )}
-      </div>
-      <span className="preview-caption">{conceptLabel}</span>
+      )}
+      {kind !== 'medcare' && (
+        <span className="preview-caption">{conceptLabel}</span>
+      )}
     </div>
   )
 }

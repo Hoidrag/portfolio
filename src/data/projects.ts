@@ -6,7 +6,7 @@ export type ProjectIdea = {
 export const projectIdeas: ProjectIdea[] = [
   {
     number: '01',
-    tools: 'React · TypeScript',
+    tools: 'Next.js · TypeScript · MongoDB · Mongoose · Tailwind CSS',
   },
   {
     number: '02',
